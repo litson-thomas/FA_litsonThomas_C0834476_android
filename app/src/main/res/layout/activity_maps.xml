@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:id="@+id/main_wrapper"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary"
+    android:elevation="50dp"
+    app:layout_constraintTop_toTopOf="@id/main_wrapper"
+    app:layout_constraintLeft_toLeftOf="@id/main_wrapper"
+    app:layout_constraintRight_toRightOf="@id/main_wrapper">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="@color/primary"
+      tools:layout_editor_absoluteX="56dp"
+      tools:layout_editor_absoluteY="1dp">
+
+      <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:background="@color/primary"
+        android:fontFamily="@font/poppins_bold"
+        android:text="My Places" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/primary"
+        android:padding="10dp"
+        android:layout_gravity="center_vertical"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+          android:layout_width="25dp"
+          android:layout_height="35dp"
+          android:layout_marginLeft="10dp"
+          android:src="@drawable/ic_search"
+          />
+
+        <TextView
+          android:id="@+id/searchTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:gravity="center_vertical"
+          android:layout_marginLeft="15dp"
+          android:textSize="15dp"
+          android:textColor="@color/white"
+          android:text="@string/search_title" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+          android:id="@+id/nearbyTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="18dp"
+          android:layout_marginLeft="20dp"
+          android:textSize="12dp"
+          android:fontFamily="@font/poppins"
+          android:textColor="@color/white"
+          android:text="Near by" />
+
+        <HorizontalScrollView
+          android:id="@+id/nearbyPlacesWrapper"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="20dp"
+          android:paddingBottom="10dp"
+          app:layout_constraintLeft_toLeftOf="@id/main_wrapper"
+          app:layout_constraintRight_toRightOf="@id/main_wrapper"
+          app:layout_constraintTop_toBottomOf="@id/header">
+
+          <com.google.android.material.chip.ChipGroup
+            android:id="@+id/nearbyButtonChips"
+            android:layout_width="match_parent"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+              android:id="@+id/nearByRestaurants"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:fontFamily="@font/poppins"
+              android:text="Restaurants"
+              style="@style/Widget.MaterialComponents.Chip.Choice"
+              android:textColor="@color/black_200" />
+
+            <com.google.android.material.chip.Chip
+              android:id="@+id/nearByATM"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:fontFamily="@font/poppins"
+              android:text="ATM"
+              style="@style/Widget.MaterialComponents.Chip.Choice"
+              android:textColor="@color/black_200" />
+
+            <com.google.android.material.chip.Chip
+              android:id="@+id/nearByCafe"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:fontFamily="@font/poppins"
+              android:text="Cafes"
+              style="@style/Widget.MaterialComponents.Chip.Choice"
+              android:textColor="@color/black_200" />
+
+            <com.google.android.material.chip.Chip
+              android:id="@+id/nearByAirport"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:fontFamily="@font/poppins"
+              android:text="Airport"
+              style="@style/Widget.MaterialComponents.Chip.Choice"
+              android:textColor="@color/black_200" />
+
+            <com.google.android.material.chip.Chip
+              android:id="@+id/nearByBanks"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:fontFamily="@font/poppins"
+              android:text="Banks"
+              style="@style/Widget.MaterialComponents.Chip.Choice"
+              android:textColor="@color/black_200" />
+
+            <com.google.android.material.chip.Chip
+              android:id="@+id/nearByChurch"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:fontFamily="@font/poppins"
+              android:text="Church"
+              style="@style/Widget.MaterialComponents.Chip.Choice"
+              android:textColor="@color/black_200" />
+
+          </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+  </androidx.cardview.widget.CardView>
+
+  <fragment
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    map:layout_constraintTop_toBottomOf="@id/header"
+    map:layout_constraintBottom_toTopOf="@id/actionsWrapper"
+    tools:context=".MapsActivity" />
+
+  <LinearLayout
+    android:id="@+id/actionsWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="@id/main_wrapper"
+    app:layout_constraintLeft_toLeftOf="@id/main_wrapper"
+    app:layout_constraintRight_toRightOf="@id/main_wrapper"
+    android:padding="10dp"
+    android:gravity="center"
+    android:elevation="20dp"
+    android:background="@drawable/corner_background"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="410dp">
+
+    <Button
+      android:id="@+id/toMyList"
+      android:layout_width="wrap_content"
+      android:layout_height="60dp"
+      android:text="My Favourites"
+      android:layout_margin="5dp"
+      android:textColor="@color/white"
+      android:layout_weight="1"
+      android:layout_marginRight="10dp"
+      android:background="@drawable/primary_button"
+      tools:layout_editor_absoluteX="75dp"
+      tools:layout_editor_absoluteY="206dp" />
+
+    <Button
+      android:id="@+id/addNewPlace"
+      android:layout_width="wrap_content"
+      android:layout_height="60dp"
+      android:text="Get Directions"
+      android:layout_margin="5dp"
+      android:layout_weight="1"
+      android:textColor="@color/white"
+      android:background="@drawable/secondary_button"
+      tools:layout_editor_absoluteX="75dp"
+      tools:layout_editor_absoluteY="206dp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/selectedLocationWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@id/actionsWrapper"
+    tools:layout_editor_absoluteX="1dp"
+    android:elevation="20dp"
+    android:gravity="center_vertical"
+    android:background="@color/primary"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="30dp"
+    android:visibility="invisible"
+    tools:layout_editor_absoluteY="427dp">
+
+    <ImageView
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginRight="15dp"
+      android:src="@drawable/ic_location"
+      />
+
+    <LinearLayout
+      android:id="@+id/selectedDetailsWrapper"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/selectedTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="SELECTED LOCATION"
+        android:textColor="@color/black_200"
+        android:textSize="8dp" />
+
+      <TextView
+        android:id="@+id/selectedName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:text="Malvern Town Center"
+        android:textSize="14dp" />
+
+      <TextView
+        android:id="@+id/selectedAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Malvern town center Address"
+        android:textColor="@color/text_light_grey"
+        android:textSize="11dp" />
+
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/addLocationBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="30dp"
+      android:backgroundTint="@color/white"
+      android:fontFamily="@font/poppins_bold"
+      android:textColor="@color/primary"
+      android:elevation="0dp"
+      android:background="@drawable/white_button"
+      android:text="Add" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/spinnerWrapper"
+    android:layout_width="wrap_content"
+    app:layout_constraintRight_toRightOf="@id/main_wrapper"
+    app:layout_constraintBottom_toTopOf="@id/actionsWrapper"
+    android:background="@drawable/corner_background"
+    android:layout_marginBottom="15dp"
+    android:layout_marginRight="15dp"
+    android:gravity="center_horizontal"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:layout_height="45dp">
+
+    <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Change Style"
+      android:fontFamily="@font/poppins"
+      tools:layout_editor_absoluteX="327dp"
+      tools:layout_editor_absoluteY="490dp" />
+
+    <Spinner
+      android:id="@+id/mapStyles"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:layout_weight="1"
+      android:fontFamily="@font/poppins"
+      tools:layout_editor_absoluteX="1dp"
+      tools:layout_editor_absoluteY="367dp" />
+  </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

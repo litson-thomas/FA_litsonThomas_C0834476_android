@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/drawable/corner_background.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.245" />
+        <entry key="app/src/main/res/drawable/ic_checkmark.xml" value="0.3315" />
+        <entry key="app/src/main/res/drawable/ic_checkmark_done.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/ic_location.xml" value="0.149" />
+        <entry key="app/src/main/res/drawable/primary_button.xml" value="0.3315" />
+        <entry key="app/src/main/res/drawable/secondary_button.xml" value="0.149" />
+        <entry key="app/src/main/res/layout/activity_custom_directions.xml" value="0.26984558105468753" />
+        <entry key="app/src/main/res/layout/activity_favourites_list.xml" value="0.24087371826171874" />
+        <entry key="app/src/main/res/layout/activity_location_details.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.12858428955078127" />
+        <entry key="app/src/main/res/layout/location_list_item.xml" value="0.335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/customDetailsWrapper"
+    tools:context=".CustomDirections">
+
+  <fragment
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customDetailsMap"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    map:layout_constraintTop_toTopOf="@id/customDetailsWrapper"
+    map:layout_constraintBottom_toTopOf="@id/actionsWrapper"
+    tools:context=".LocationDetails" />
+
+  <LinearLayout
+    android:id="@+id/actionsWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    app:layout_constraintBottom_toBottomOf="@id/customDetailsWrapper"
+    android:padding="15dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="20dp">
+
+
+    <LinearLayout
+      android:id="@+id/fromSearch"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      tools:layout_editor_absoluteX="1dp"
+      android:background="@drawable/input_white"
+      android:padding="15dp"
+      android:layout_gravity="center_horizontal"
+      tools:layout_editor_absoluteY="20dp">
+
+      <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/text_grey"
+        android:layout_marginRight="20dp"
+        android:text="From" />
+
+      <TextView
+        android:id="@+id/fromAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="13dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black_200"
+        android:hint="Select From address"
+        android:text="" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/toSearch"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      tools:layout_editor_absoluteX="1dp"
+      android:background="@drawable/input_white"
+      android:padding="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_gravity="center_horizontal"
+      tools:layout_editor_absoluteY="20dp">
+
+      <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/text_grey"
+        android:layout_marginRight="20dp"
+        android:text="To" />
+
+      <TextView
+        android:id="@+id/toAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="13dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black_200"
+        android:hint="Select To address"
+        android:text="" />
+
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/getCustomDirectionsBtn"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:text="Get Directions"
+      android:layout_marginTop="10dp"
+      android:textColor="@color/white"
+      android:layout_weight="1"
+      android:background="@drawable/primary_button"
+      tools:layout_editor_absoluteX="75dp"
+      tools:layout_editor_absoluteY="206dp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/directionsDetails"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:layout_constraintLeft_toLeftOf="@id/customDetailsWrapper"
+    app:layout_constraintRight_toRightOf="@id/customDetailsWrapper"
+    app:layout_constraintBottom_toTopOf="@id/actionsWrapper"
+    android:background="@color/white"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="532dp">
+
+    <TextView
+      android:id="@+id/routeTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/poppins_bold"
+      android:textColor="@color/black_200"
+      android:layout_marginRight="10dp"
+      android:text="DIRECTIONS DETAILS"
+      android:textSize="10dp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/distanceKms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/primary"
+        android:layout_marginRight="10dp"
+        android:text="10Km"
+        android:textSize="20dp" />
+
+      <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black_200"
+        android:layout_marginRight="5dp"
+        android:textSize="15dp"
+        android:text="(10 min)" />
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/routerDesc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/poppins"
+      android:textColor="@color/text_grey"
+      android:layout_marginRight="10dp"
+      android:text="10Km"
+      android:textSize="13dp" />
+
+  </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

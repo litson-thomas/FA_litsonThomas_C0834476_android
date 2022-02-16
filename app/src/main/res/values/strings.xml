@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">FA_litsonThomas_C0834476_android</string>
+  <string name="title_activity_maps">MapsActivity</string>
+  <string name="search_title">Search Location...</string>
+  <string name="maps_api_key">AIzaSyDXepDl6Qr7t7OzO0qWgYYrmHENOQARE9Y</string>
+  <string name="nearby_restaurants">nearByRestaurants</string>
+  <string name="nearby_atm">nearByATM</string>
+  <string name="nearby_church">nearByChurch</string>
+  <string name="nearby_cafe">nearByCafe</string>
+  <string name="nearby_airport">nearByAirport</string>
+  <string name="nearby_banks">nearByBanks</string>
+</resources>

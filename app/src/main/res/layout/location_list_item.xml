@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="10dp"
+  android:background="@color/white"
+  android:layout_marginBottom="10dp"
+  android:id="@+id/locationListItemWrapper">
+
+  <LinearLayout
+    android:id="@+id/detailsWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintLeft_toLeftOf="@id/locationListItemWrapper"
+    app:layout_constraintRight_toRightOf="@id/locationListItemWrapper"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:layout_marginRight="50dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+      android:id="@+id/locationName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/poppins_bold"
+      android:textSize="18dp"
+      android:textColor="@color/black_200"
+      android:text="Malvern Town Center" />
+
+    <TextView
+      android:id="@+id/locationAddress"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/poppins"
+      android:textSize="12dp"
+      android:textColor="@color/text_grey"
+      android:text="Malvern Town Center Address" />
+
+    <LinearLayout
+      android:id="@+id/dateWrapper"
+      android:layout_marginTop="5dp"
+      android:layout_width="wrap_content"
+      android:orientation="horizontal"
+      android:layout_gravity="center_vertical"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_baseline_date_range_24"/>
+
+      <TextView
+        android:id="@+id/locationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textSize="12dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/text_grey"
+        android:text="15 February, 2021" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/notVisited"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    app:layout_constraintRight_toRightOf="@id/locationListItemWrapper"
+    app:layout_constraintTop_toTopOf="@id/locationListItemWrapper"
+    app:layout_constraintBottom_toBottomOf="@id/locationListItemWrapper"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="15dp"
+    android:visibility="visible"
+    android:src="@drawable/ic_checkmark"/>
+
+  <ImageView
+    android:id="@+id/locationVisited"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    app:layout_constraintRight_toRightOf="@id/locationListItemWrapper"
+    app:layout_constraintTop_toTopOf="@id/locationListItemWrapper"
+    app:layout_constraintBottom_toBottomOf="@id/locationListItemWrapper"
+    android:layout_marginRight="15dp"
+    android:visibility="invisible"
+    android:src="@drawable/ic_checkmark_done"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
